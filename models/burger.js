@@ -14,14 +14,10 @@ const BURGER = {
     });
   },
   updateOne: function(burgerId, cb) {
-    ORM.updateOne("burgers", burgerId, function(res) {
+    ORM.updateOne("burgers", burgerId , function(res) {
       cb(res);
     });
   }
-
- 
-
-
 };
 
 // Export the database functions for the controller (catsController.js).

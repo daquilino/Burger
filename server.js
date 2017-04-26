@@ -1,7 +1,7 @@
 //Dependencies
 const EXPRESS = require('express');
 const BODY_PARSER = require('body-parser');
-const METHOD_OVERIDE = require('method-overide');
+const METHOD_OVERIDE = require('method-override');
 const EXPHBS = require("express-handlebars");
 
 // Import routes and give the server access to them.
@@ -21,9 +21,9 @@ APP.use(BODY_PARSER.urlencoded({ extended: false }));
 APP.use(METHOD_OVERIDE("_method"));
 
 // Set Handlebars.
-APP.engine("handlebars", exphbs({ defaultLayout: "main" }));
+APP.engine("handlebars", EXPHBS({ defaultLayout: "main" }));
 APP.set("view engine", "handlebars");
 
 APP.use("/", ROUTES);
 
-APP.listen(PORT);
+APP.listen(PORT, () => console.log("listening on port:", PORT));

@@ -1,5 +1,5 @@
 const EXPRESS = require("express");
-const ROUTER = express.Router();
+const ROUTER = EXPRESS.Router();
 
 // Import the model (cat.js) to use its database functions.
 const BURGER = require("../models/burger.js");
@@ -16,24 +16,18 @@ ROUTER.get("/", function(req, res) {
   });
 });
 
+//INSERT
 ROUTER.post("/", function(req, res) {
-  BURGER.insertOne([
-    "name", "sleepy"
-  ], [
-    req.body.name, req.body.sleepy
-  ], function() {
+  BURGER.insertOne(req.body.newBurger, function() {
     res.redirect("/");
   });
 });
 
+//UPDATE
 ROUTER.put("/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+ 
 
-  console.log("condition", condition);
-
-  BURGER.updateOne({
-    sleepy: req.body.sleepy
-  }, condition, function() {
+  BURGER.updateOne(req.params.id, function() {
     res.redirect("/");
   });
 });

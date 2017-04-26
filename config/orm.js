@@ -5,19 +5,21 @@ const CONNECTION  = require("./connection.js");
 const ORM = 
 {
   //Selects all rows from table
-  selectALL: function(table, cb) 
+  selectAll: function(table, cb) 
   {
     var queryString = "SELECT * FROM ??";
-    connection.query(queryString, [table], function(err, result) {
+    CONNECTION.query(queryString, [table], function(err, result) {
+       if (err) throw err;
       cb(result);
     });
   },
   // Inserts row into table
   insertOne: function(table, burger, cb) 
   {
-    var queryString = "INSERT INTO ?? (burger_name) VALUES (?)";
+    var queryString = "INSERT INTO ?? (burger_name, devoured) VALUES (?, 0)";
     console.log(queryString);
-    connection.query(queryString, [table, burger], function(err, result) {
+    CONNECTION.query(queryString, [table, burger], function(err, result) {
+      if (err) throw err;
       cb(result);
     });
   },
@@ -26,7 +28,8 @@ const ORM =
   {
     var queryString = "UPDATE ?? SET devoured = ? WHERE id = ?";
 
-    connection.query(queryString, [table, true, id], function(err, result) {
+    CONNECTION.query(queryString, [table, 1, id], function(err, result) {
+      if (err) throw err;
       cb(result);
     });
   }
