@@ -1,7 +1,7 @@
 {
-  "name": "burger",
+  "name": "pizza logger",
   "version": "1.0.0",
-  "description": "A burger logger made with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.",
+  "description": "A pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daquilino/Burger.git"
+    "url": "git+https://github.com/daquilino/Pizza.git"
   },
   "author": "Douglas Aquilino",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daquilino/Burger/issues"
+    "url": "https://github.com/daquilino/Pizza/issues"
   },
-  "homepage": "https://github.com/daquilino/Burger#readme",
+  "homepage": "https://github.com/daquilino/Pizza#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
