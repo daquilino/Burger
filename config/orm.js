@@ -14,11 +14,11 @@ const ORM =
     });
   },
   // Inserts row into table
-  insertOne: function(table, burger, cb) 
+  insertOne: function(table, pizza, cb) 
   {
-    var queryString = "INSERT INTO ?? (burger_name, devoured) VALUES (?, 0)";
+    var queryString = "INSERT INTO ?? (pizza_name, devoured) VALUES (?, 0)";
     console.log(queryString);
-    CONNECTION.query(queryString, [table, burger], function(err, result) {
+    CONNECTION.query(queryString, [table, pizza], function(err, result) {
       if (err) throw err;
       cb(result);
     });

@@ -5,7 +5,7 @@ const METHOD_OVERIDE = require('method-override');
 const EXPHBS = require("express-handlebars");
 
 // Import routes and give the server access to them.
-const ROUTES = require("./controllers/burgers_controller.js");
+const ROUTES = require("./controllers/pizzas_controller.js");
 
 const PORT = process.env.PORT || 3000;
 

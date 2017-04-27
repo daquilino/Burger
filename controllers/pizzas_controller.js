@@ -2,14 +2,14 @@ const EXPRESS = require("express");
 const ROUTER = EXPRESS.Router();
 
 // Import the model (cat.js) to use its database functions.
-const BURGER = require("../models/burger.js");
+const PIZZA = require("../models/pizzas.js");
 
 // Create all our routes and set up logic within those routes where required.
 ROUTER.get("/", function(req, res) {
-  BURGER.selectAll(function(data) {
+  PIZZA.selectAll(function(data) {
     //
     var hbsObject = {
-      burgers: data
+      pizzas: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -18,7 +18,7 @@ ROUTER.get("/", function(req, res) {
 
 //INSERT
 ROUTER.post("/", function(req, res) {
-  BURGER.insertOne(req.body.newBurger, function() {
+  PIZZA.insertOne(req.body.newPizza, function() {
     res.redirect("/");
   });
 });
@@ -27,7 +27,7 @@ ROUTER.post("/", function(req, res) {
 ROUTER.put("/:id", function(req, res) {
  
 
-  BURGER.updateOne(req.params.id, function() {
+  PIZZA.updateOne(req.params.id, function() {
     res.redirect("/");
   });
 });

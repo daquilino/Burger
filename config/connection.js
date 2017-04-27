@@ -17,7 +17,7 @@ else
     host: "localhost",
     user: "root",
     password: PW.pw,
-    database: "burgers_db"
+    database: "pizzas_db"
   });
   
 }
