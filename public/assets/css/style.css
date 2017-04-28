@@ -1,5 +1,25 @@
 body
 {
-	background: blue;
+	background: white;
+
+}
+
+form
+{
+	display: inline-block;
+
+}
+
+#add-pizza
+{
+	background: url(../images/pizza.png) center no-repeat;
+	height: 300px;
+	border: solid 1px black; /* This makes elements not move in div. don't know why?*/
+
+}
+
+#add-form
+{
+	margin-top: 50px;
 
 }

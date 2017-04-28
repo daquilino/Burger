@@ -1,43 +1,93 @@
 
-<h1>#unless this.devoured</h1>
-<ul>
-{{#each pizzas}}
-    {{#unless this.devoured}}
-      <li><strong>{{this.id}}.)</strong>{{this.pizza_name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value=1>
-          <button type="submit">EAT ME!</button>
-        </form>
-
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h1>#if this.devoured</h1>
-<ul>
-{{#each pizzas}}
-    {{#if this.devoured}}
-      <li>
-        <strong>{{this.id}}.)</strong>{{this.pizza_name}}   
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<div>
+<div class="container text-center">
+  <h1>Pizza Logger!</h1>
   
- <h2>Add a Pizza.</h2>
-<form  action="/" method="POST">
+  <div class="row"> 
+    <div class="col-sm-4" id="eat">
+      <div class="panel panel-info"> 
+       
+      <div class="panel-heading">
+         <h3>Pizzas To Eat</h3>
+      </div>
+      <div class="panel-body">
+       
+                <!-- .table-striped alternates table row colors -->
+                <table class="table table-striped"> 
+                  <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pizza</th>
+                        <th>button</th>
+                                
+                     </tr>
+                  </thead>
+                  <tbody >
+                    {{#each pizzas}}
+                    {{#unless this.devoured}}
+                      <tr>
+                        <td><strong>{{this.id}}.)</strong></td>
 
-  <div class="form-group">
-    <label for="addPizza">Pizza Name:</label>
-    <input type="text" id="addPizza" name="newPizza">
-  </div>
+                        <td>{{this.pizza_name}}</td>
+                        
+                        <td>  
+                          <form action="/{{this.id}}?_method=PUT" method="POST">
+                            <input type="hidden" name="devoured" value=1>
+                            <button type="submit">EAT ME!</button>
+                          </form>
+                        </td>
+                      </tr>
+                    {{/unless}}
+                  {{/each}}
+
+                  </tbody>
+                </table>
+        </div><!-- END panel-body -->
+      </div>
+
+    </div><!-- End #eat -->  
+    
+    <div class="col-sm-4" id="add-pizza">
+      <h3>Add a Pizza.</h3>
+      <form  action="/" method="POST">
+
+        <div class="form-group" id="add-form">
+         {{!--  <label for="addPizza">Pizza Name:</label> --}}
+          <input type="text" id="addPizza" name="newPizza" placeholder="Pizza Name">
+        </div>
+
+        <button type="submit">Add Pizza</button>
+      
+      </form>
+
+    </div><!-- End .add -->
+    
+    <div class="col-sm-4">
+      <h3>Devoured!</h3>
+       <table class="table table-striped"> 
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Pizza</th>             
+            </tr>
+          </thead>
+          
+          <tbody >
+            {{#each pizzas}}
+              {{#if this.devoured}}
+                <tr>
+                  <td><strong>{{this.id}}.)</strong></td>
+                  <td>{{this.pizza_name}}</td>
+                </tr>
+              {{/if}}
+            {{/each}}
+
+          </tbody>
+        </table>
+
+    </div><!-- End .devoured -->  
 
 
-  <button type="submit">Add Pizza</button>
-</form>
+  </div><!-- End .row -->
 
-</div>
+</div><!-- End .container -->
+
