@@ -1,5 +1,8 @@
--- For Heroku JAWSBD use given database name
-USE pizzas_db;
+-- MySQL
+-- USE pizzas_db;
+
+-- Heroku JAWSBD .
+USE `lx4054pv8zjti4eb`;
 
 INSERT INTO pizzas (pizza_name, devoured) VALUES ('Mushroom', false);
 INSERT INTO pizzas (pizza_name, devoured) VALUES ('Spinach Feta', false);

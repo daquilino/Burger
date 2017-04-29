@@ -1,5 +1,5 @@
 {
-  "name": "pizza logger",
+  "name": "pizza-logger",
   "version": "1.0.0",
   "description": "A pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.",
   "main": "server.js",

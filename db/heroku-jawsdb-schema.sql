@@ -1,7 +1,7 @@
 -- Template Schema for JAWSDB Heroku Table
 
--- For Heroku JAWSBD use supplied database name
-USE ;
+-- Heroku JAWSBD supplied database name from MySQL Workbench.
+USE `lx4054pv8zjti4eb`;
 
 -- Create the table plans.
 CREATE TABLE pizzas
