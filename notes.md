@@ -20,4 +20,8 @@ server.js
 		- burgers_controller.js
 		
 
+
+//dependency flow
+connections.js => orm.js => burger.js => burgers_controller.js => server.js		
+
 	
