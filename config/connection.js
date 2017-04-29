@@ -1,6 +1,6 @@
 
+//Dependency
 const MYSQL = require('mysql');
-//const PW = require('./pw.js');
 
 let connection;
 
@@ -13,15 +13,16 @@ if(process.env.JAWSDB_URL)
 // else connection is local MySQL database. 
 else
 { 
-	// connection = MYSQL.createConnection({
- //    host: "localhost",
- //    user: "root",
- //    password: PW.pw,
- //    database: "pizzas_db"
- //  });
+	connection = MYSQL.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "test",
+    database: "pizzas_db"
+  });
   
 }
 
+//Establishes DB connection
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
