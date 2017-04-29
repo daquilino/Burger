@@ -5,7 +5,7 @@ Pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM follo
 #### Directory structure
 
 ```
-
+.
 ├── config
 │   ├── connection.js
 │   └── orm.js
@@ -43,7 +43,7 @@ Pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM follo
     └── layouts
         └── main.handlebars
 ``` 
-- - -
+
 
 ## Built With
 
