@@ -1,25 +1,48 @@
 body
 {
-	background: white;
-
-}
-
-form
-{
-	display: inline-block;
-
-}
-
-#add-pizza
-{
-	background: url(../images/pizza.png) center no-repeat;
-	height: 300px;
-	border: solid 1px black; /* This makes elements not move in div. don't know why?*/
-
+	background:  linear-gradient(to right, green, white , red);
 }
 
 #add-form
 {
-	margin-top: 50px;
+	margin-top: 97px;
+}
 
+#main-header
+{
+	margin-top: 0vh;
+	margin-bottom: 6vh;
+	font-weight: 900;
+	color: green;
+	font-size: 8vw;
+}
+
+.panel-heading
+{
+	text-align: center;
+}
+
+h3
+{
+	color: green;
+	font-weight: 900;
+	margin: 0;
+}
+
+#add-panel
+{
+	text-align: center;
+	background: url(../images/pizza.png) center no-repeat;
+	min-height: 300px;
+}
+
+
+.strike-through
+{
+	text-decoration: line-through;
+}
+
+.btn
+{
+	background-color: lightgreen;
 }
