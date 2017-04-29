@@ -5,43 +5,43 @@ Pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM follo
 #### Directory structure
 
 ```
-.
-├── config
-│   ├── connection.js
-│   └── orm.js
-│ 
-├── controllers
-│   └── pizzas_controller.js
-│
-├── db
-│   ├── heroku-jawsdb-schema.sql
-│   ├── schema.sql
-│   └── seeds.sql
-│
-├─ .gitignore
-│
-├── models
-│   └── pizza.js
-│ 
-├── node_modules
-│ 
-├── package.json
-│
-├── public
-│   └── assets
-│       ├── css
-│       │   └── style.css
-│       └── img
-│           └── pizza.png
-│
-├── README.md   
-│
-├── server.js
-│
-└── views
-    ├── index.handlebars
-    └── layouts
-        └── main.handlebars
+   .
+   ├── config
+   │   ├── connection.js
+   │   └── orm.js
+   │ 
+   ├── controllers
+   │   └── pizzas_controller.js
+   │
+   ├── db
+   │   ├── heroku-jawsdb-schema.sql
+   │   ├── schema.sql
+   │   └── seeds.sql
+   │
+   ├─ .gitignore
+   │
+   ├── models
+   │   └── pizza.js
+   │ 
+   ├── node_modules
+   │ 
+   ├── package.json
+   │
+   ├── public
+   │   └── assets
+   │       ├── css
+   │       │   └── style.css
+   │       └── img
+   │           └── pizza.png
+   │
+   ├── README.md   
+   │
+   ├── server.js
+   │
+   └── views
+       ├── index.handlebars
+       └── layouts
+           └── main.handlebars
 ``` 
 
 
@@ -63,47 +63,3 @@ Pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM follo
 ## Author
 
 * **Douglas Aquilino** - [https://github.com/daquilino](https://github.com/daquilino)
-
-
-
-All the recommended files and directories from the steps above should look like the following structure:
-
-```
-	.
-	├── config
-	│   ├── connection.js
-	│   └── orm.js
-	│ 
-	├── controllers
-	│   └── burgers_controller.js
-	│
-	├── db
-	│   ├── schema.sql
-	│   └── seeds.sql
-	│
-	├── models
-	│   └── burger.js
-	│ 
-	├── node_modules
-	│ 
-	├── package.json
-	│
-	├── public
-	│   ├── assets
-	│   │   ├── css
-	│   │   │   └── burger_style.css
-	│   │   └── img
-	│   │       └── burger.png
-	│   └── test.html
-	│
-	├── server.js
-	│
-	└── views
-	    ├── index.handlebars
-	    └── layouts
-	        └── main.handlebars
-```
-
-- - -
-
-### One More Thing
