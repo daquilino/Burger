@@ -7,7 +7,6 @@ const PIZZA = {
       cb(res);
     });
   },
-  // The variables cols and vals are arrays.
   insertOne: function(pizza, cb) {
     ORM.insertOne("pizzas", pizza, function(res) {
       cb(res);
