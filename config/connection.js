@@ -1,4 +1,3 @@
-
 //Dependency
 const MYSQL = require('mysql');
 
@@ -8,7 +7,6 @@ let connection;
 if(process.env.JAWSDB_URL)
 {
   connection = MYSQL.createConnection(process.env.JAWSDB_URL);
- 
 }
 // else connection is local MySQL database. 
 else
@@ -19,7 +17,6 @@ else
     password: "test",
     database: "pizzas_db"
   });
-  
 }
 
 //Establishes DB connection
@@ -29,10 +26,8 @@ connection.connect(function(err){
     console.error("error connecting: " + err.stack);
     return;
   }
-
+  
   console.log("connected as id " + connection.threadId);
-
 });
-
 
 module.exports = connection;

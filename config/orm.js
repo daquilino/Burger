@@ -1,5 +1,5 @@
+//Dependency
 const CONNECTION  = require("./connection.js");
-
 
 // ORM (Object Relational Mapper) 
 const ORM = 

@@ -7,7 +7,6 @@ const PIZZA = require("../models/pizzas.js");
 // Create all our routes and set up logic within those routes where required.
 ROUTER.get("/", function(req, res) {
   PIZZA.selectAll(function(data) {
-    //
     var hbsObject = {
       pizzas: data
     };
@@ -26,13 +25,10 @@ ROUTER.post("/", function(req, res) {
 //UPDATE
 ROUTER.put("/:id", function(req, res) {
  
-
   PIZZA.updateOne(req.params.id, function() {
     res.redirect("/");
   });
 });
-
-
 
 // Export routes for server.js to use.
 module.exports = ROUTER;

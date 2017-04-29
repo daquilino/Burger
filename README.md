@@ -1,14 +1,48 @@
 # Pizza Logger
 Pizza logger made with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.
 
-## Getting Started
 
-### Prerequisites
+#### Directory structure
 
-* Web Browser
-* Internet Connection 
-
-## Usage
+```
+.
+├── config
+│   ├── connection.js
+│   └── orm.js
+│ 
+├── controllers
+│   └── pizzas_controller.js
+│
+├── db
+│   ├── heroku-jawsdb-schema.sql
+│   ├── schema.sql
+│   └── seeds.sql
+│
+├─ .gitignore
+│
+├── models
+│   └── pizza.js
+│ 
+├── node_modules
+│ 
+├── package.json
+│
+├── public
+│   └── assets
+│       ├── css
+│       │   └── style.css
+│       └── img
+│           └── pizza.png
+│
+├── README.md   
+│
+├── server.js
+│
+└── views
+    ├── index.handlebars
+    └── layouts
+        └── main.handlebars
+``` 
 
 ## Built With
 

@@ -1,4 +1,4 @@
--- Template Schema for JAWSDB Heroku Table
+-- Schema for JAWSDB Heroku Table
 
 -- Heroku JAWSBD supplied database name from MySQL Workbench.
 USE `lx4054pv8zjti4eb`;
