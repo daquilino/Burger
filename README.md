@@ -2,7 +2,7 @@
 
 Pizza Logger is an app that lets users input the names of pizzas they'd like to eat, and keep track whether or no they have devoured them. The app utilizes MySQL (JAWSDB on Heroku), Node, Express, Handlebars and a homemade ORM and follows the MVC design pattern.
 
-Whenever a user submits a pizza's name, the app will display the pizza and a corresponding 'EAT ME!' button in a table on the left side (or top when responsive) of the page waiting to be devoured.  When user clicks the `Eat me!` button, the pizza will move to a table on the right side (or bottom when responsive) of the page.
+Whenever a user submits a pizza's name, the app will display the pizza and a corresponding `EAT ME!` button in a table on the left side (or top when responsive) of the page waiting to be devoured.  When user clicks the `EAT ME!` button, the pizza will move to a table on the right side (or bottom when responsive) of the page.
 
 
 #### Directory structure / MVC design pattern 
