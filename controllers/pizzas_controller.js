@@ -24,7 +24,7 @@ ROUTER.post("/", function(req, res) {
     });
   }
   else
-    req.json({});
+    res.json({});
 
 });
 
