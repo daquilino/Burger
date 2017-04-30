@@ -23,6 +23,8 @@ ROUTER.post("/", function(req, res) {
       res.redirect("/");
     });
   }
+  else
+    req.send({});
 
 });
 
