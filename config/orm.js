@@ -8,6 +8,7 @@ const ORM =
   selectAll: function(table, cb) 
   {
     var queryString = "SELECT * FROM ??";
+    
     CONNECTION.query(queryString, [table], function(err, result) {
        if (err) throw err;
       cb(result);
@@ -16,8 +17,8 @@ const ORM =
   // Inserts row into table
   insertOne: function(table, pizza, cb) 
   {
-    var queryString = "INSERT INTO ?? (pizza_name, devoured) VALUES (?, 0)";
-    console.log(queryString);
+    var queryString = "INSERT INTO ?? (pizza_name, devoured) VALUES (?, 0)";     
+    
     CONNECTION.query(queryString, [table, pizza], function(err, result) {
       if (err) throw err;
       cb(result);

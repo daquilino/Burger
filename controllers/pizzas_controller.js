@@ -10,16 +10,20 @@ ROUTER.get("/", function(req, res) {
     var hbsObject = {
       pizzas: data
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 //INSERT
 ROUTER.post("/", function(req, res) {
-  PIZZA.insertOne(req.body.newPizza, function() {
-    res.redirect("/");
-  });
+  // if parameter exists, not "".
+  if(req.body.newPizza)
+  {  
+    PIZZA.insertOne(req.body.newPizza, function() {
+      res.redirect("/");
+    });
+  }
+
 });
 
 //UPDATE
